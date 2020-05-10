@@ -54,7 +54,8 @@ class BookController extends Controller
      */
     public function show($book) 
     {
-        
+        $book = Book::findOrFail($book);
+        return $this->successResponse($book);
     }
     
     /**
